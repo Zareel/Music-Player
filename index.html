@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+  <script
+    src="https://kit.fontawesome.com/c2afb85645.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <audio src="" id="audio"></audio>
+
+    <div class="container">
+      <div class="music-player">
+        <div class="disk"></div>
+        <div class="duration-bar">
+          <input type="range" value="0" class="song-duration-display" />
+          <span class="current-time">00:00</span>
+          <span class="song-duration">00:00</span>
+        </div>
+        <div class="controls">
+          <i class="bi bi-caret-left-fill" id="backward-icon"></i>
+          <i class="bi bi-music-note-beamed" id="play-icon"></i>
+          <i class="bi bi-caret-right-fill" id="forward-icon"></i>
+        </div>
+      </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

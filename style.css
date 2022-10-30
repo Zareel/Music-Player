@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url(./images/musicPlayerbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+body::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.music-player {
+  width: 350px;
+  height: 550px;
+  border-radius: 10px;
+  /* background-color: #eb5d75; */
+  box-shadow: 0 40px 100px rgba(red, green, blue, 0.5);
+  position: absolute;
+  right: 70px;
+  bottom: 50px;
+  overflow: hidden;
+  color: #ff0062;
+}
+.music-name,
+.artist-name {
+  text-align: center;
+  font-family: "Mukta";
+}
+.music-name {
+  font-size: 40px;
+  font-weight: 500;
+}
+.artist-name {
+  font-size: 20px;
+}
+.disk {
+  position: relative;
+  display: block;
+  margin: 40px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: url(./images/cover\ 1.jpg);
+  background-position: center;
+  background-size: cover;
+  animation: rotate 20s linear infinite;
+  animation-play-state: paused;
+}
+.disk.play {
+  animation-play-state: running;
+}
+.disk::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #6a4249;
+}
+.duration-bar {
+  width: 100%;
+  position: relative;
+}
+.song-duration-display {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: #e38091;
+  overflow: hidden;
+  cursor: pointer;
+}
+.current-time,
+.song-duration {
+  font-size: 20px;
+  color: #fff;
+}
+.song-duration {
+  position: absolute;
+  right: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.bi {
+  color: #fff;
+  padding: 10px;
+  font-size: 30px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
